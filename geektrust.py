@@ -4,13 +4,7 @@ def main():
         raise Exception("File path not entered")
     file_path = argv[1]
     f = open(file_path, 'r')
-    lines = f.readlines()
-    #definations of stationery informations
-    Listeditems={'TSHIRT':{'Category':'Clothing','Price':1000,'Discount':0.1},'JACKET':{'Category':'Clothing','Price':2000,'Discount':0.05},'CAP':{'Category':'Clothing','Price':500,'Discount':0.2},'NOTEBOOK':{'Category':'Stationery','Price':200,'Discount':0.2},'PENS':{'Category':'Stationery','Price':300,'Discount':0.1},'MARKERS':{'Category':'Stationery','Price':500,'Discount':0.05}	}
-    basket={}
-    add=['ADD_ITEM']
-    prints=['PRINT_BILL']
-    maxQuantity={'Clothing':2,'Stationery':3}
+    lines = f.readlines(
     for line in lines:
         #split the line into commands
         command=line.split(' ')
